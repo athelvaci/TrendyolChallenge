@@ -26,7 +26,7 @@
         <beans:property name="url"
                         value="jdbc:mysql://localhost:3306/trendyolcase" />
         <beans:property name="username" value="root" />
-        <beans:property name="password" value="155991ath" />
+        <beans:property name="password" value="password" />
     </beans:bean>
 
     <!-- Hibernate Bean definition -->
