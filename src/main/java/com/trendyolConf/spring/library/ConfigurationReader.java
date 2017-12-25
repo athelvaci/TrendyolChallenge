@@ -6,11 +6,23 @@ public class ConfigurationReader {
 
 	private Configuration configuration;
 
+	/**
+	 * creates connection with database for a spesific application and refresh it at parametered intervals
+	 * @param applicationName	name of a application
+	 * @param connectionString	required connection for database
+	 * @param refreshTimerIntervalInMs	time for refresh and check databese
+	 */
 	public ConfigurationReader(String applicationName, String connectionString, int refreshTimerIntervalInMs) {
 		configuration = new Configuration(applicationName, connectionString, refreshTimerIntervalInMs);
 		
 	}
 
+	/**
+	 * Get value of a configuration in type of its stored.
+	 * 
+	 * @param key - name of a configuration
+	 * @return value in type of stored
+	 */
 	public <T> T getValue(String key) {
 		Config conf = configuration.getConfig(key);
 		switch (conf.getType()) {

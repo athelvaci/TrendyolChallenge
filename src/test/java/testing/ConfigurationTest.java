@@ -13,6 +13,16 @@ public class ConfigurationTest {
 		ConfigurationReader configurationReader = new ConfigurationReader("SERVICE-A", "jdbc:mysql://localhost/trendyolcase", 3000);
 		String output = configurationReader.getValue("SiteName");
 		assertEquals(output, "trendyol.com");
+		while(true){
+			output = configurationReader.getValue("ayse");
+			System.out.println("TEST----- "+output);
+			try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 		
 	}
