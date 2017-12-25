@@ -1,0 +1,39 @@
+--
+-- create database
+--
+
+CREATE DATABASE  IF NOT EXISTS `trendyolcase`;
+
+USE `trendyolCase`;
+
+
+--
+-- create table
+--
+
+
+DROP TABLE IF EXISTS `configstorage`;
+
+CREATE TABLE `configstorage` (
+ 
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ 
+ `name` varchar(255) DEFAULT NULL,
+ 
+ `type` varchar(255) DEFAULT NULL,
+  
+`value` varchar(255) DEFAULT NULL,
+ 
+ `isactive` int(11) NOT NULL DEFAULT 0 ,
+ 
+ `applicationname` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `configstorage` VALUES (1,'SiteName','String','trendyol.com','1','SERVICE-A');
+
+INSERT INTO `configstorage` VALUES (2,'IsBasketEnabled','Boolean','1','1','SERVICE-B');
+
+INSERT INTO `configstorage` VALUES (3,'MaxItemCount','Int','50','0','SERVICE-A');
